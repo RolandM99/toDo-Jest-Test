@@ -25,7 +25,7 @@ export default class Tasks {
 
   static addToPage(item) {
     const arrayOfElements = Tasks.getFromLocalStore();
-    arrayOfElements.forEach((elem) => Tasks.myTasksView(elem, item));
+    arrayOfElements.forEach((element) => Tasks.myTasksView(element, item));
     Tasks.addToLocalStore(arrayOfElements);
   }
 
@@ -41,7 +41,6 @@ export default class Tasks {
     target.parentElement.parentElement.remove();
   }
 
-  // Add HTML to a page. Parametrs - what to add and where to add
   static myTasksView(element, item) {
     let checked = '';
     if (element.complete) {
