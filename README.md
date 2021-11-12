@@ -1,5 +1,4 @@
-
-# TO-DO List
+# TO-DO List Testing 
 
 > "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
@@ -10,6 +9,9 @@
 - Major languages: JAVASCRIPT | HTML | CSS 
 - Frameworks: Bootstrap
 - Technologies used : Git | Github | Linter | Webpack
+
+## Tested with
+- Jest Framework
 
 ## Live Demo
 
