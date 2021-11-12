@@ -1,7 +1,7 @@
 import { JSDOM } from 'jsdom';
 import Tasks from './task.js';
 
-const dom = new JSDOM(`<!DOCTYPE html><body><ul class="addList"></body>`); // eslint-disable-line
+const dom = new JSDOM(`<!DOCTYPE html><body><ul id="addList"></body>`); // eslint-disable-line
 
 global.document = dom.window.document;
 global.window = dom.window;

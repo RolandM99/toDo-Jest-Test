@@ -1,5 +1,5 @@
 {
-  "name": "ToDo-jest-test",
+  "name": "toDo-jest-test",
   "version": "1.0.0",
   "description": "To-do list is a tool that helps to organize your day.",
   "private": true,
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.5.0",
     "eslint": "^7.32.0",
