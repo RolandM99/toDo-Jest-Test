@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unresolved, import/no-extraneous-dependencies
 import { JSDOM } from 'jsdom';
 import Tasks from './task.js';
 
