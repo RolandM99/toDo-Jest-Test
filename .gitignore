@@ -1,5 +1,4 @@
 # .gitignore
 node_modules/
 
-coverage/Icov-report/prettify.css
 package-lock.json
