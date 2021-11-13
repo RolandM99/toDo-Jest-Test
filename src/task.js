@@ -43,7 +43,7 @@ export default class Tasks {
 
   static myTasksView(element, item) {
     let checked = '';
-    if (element.complete) {
+    if (element.completed) {
       checked = 'checked';
     }
     const listElement = document.createElement('li');
@@ -67,5 +67,68 @@ export default class Tasks {
       task.index = index + 1;
     });
     return arr;
+  }
+
+  static lastElementsIndex(parent) {
+    if (parent.childElementCount > 0) {
+      return parent.childElementCount + 1;
+    }
+    return 1;
+  }
+
+  static checkButtons() {
+    const tryCheck = Array.from(document.getElementsByClassName('hello'));
+    return tryCheck;
+  }
+
+  static editFromTextarea(text, index) {
+    const tasks = Tasks.getFromLocalStore();
+    tasks[index].task = text;
+    Tasks.addToLocalStore(tasks);
+  }
+
+  static clearAllCompletedTasks() {
+    const checkBoxes = Tasks.checkButtons();
+    checkBoxes.forEach((box) => {
+      if (box.checked) {
+        Tasks.removeCompletedTasks(box);
+      }
+    });
+    Tasks.makeOrderIndex();
+    const tasks = Tasks.getFromLocalStore();
+    const tasksToDo = tasks.filter((task) => !task.completed);
+    Tasks.eventStatus(tasksToDo);
+    Tasks.addToLocalStore(tasksToDo);
+  }
+
+  static makeOrderIndex() {
+    const elements = Tasks.checkButtons();
+    elements.forEach((elem, index) => elem.setAttribute('id', `${index + 1}`));
+  }
+
+  static editTask(e) {
+    const index = parseInt(e.srcElement.attributes.for.nodeValue, 10) - 1;
+    const textarea = e.srcElement.nextElementSibling;
+    const confirm = textarea.nextElementSibling;
+    confirm.classList.remove('hide');
+    textarea.classList.remove('hide');
+    e.target.classList.add('hide');
+    confirm.addEventListener('click', () => {
+      if (textarea.value === '') {
+        textarea.value = e.target.innerHTML;
+      }
+      Tasks.editFromTextarea(textarea.value, index);
+      confirm.classList.add('hide');
+      textarea.classList.add('hide');
+      e.target.textContent = textarea.value;
+      e.target.classList.remove('hide');
+    });
+  }
+
+  static completedTaskStored(e) {
+    const toChange = Tasks.getFromLocalStore();
+    const i = parseInt(e.id, 10) - 1;
+    toChange[i].completed = e.checked;
+    Tasks.addToLocalStore(toChange);
   }
 }
