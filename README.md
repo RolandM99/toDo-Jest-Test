@@ -1,6 +1,6 @@
 # TO-DO List Testing 
 
-> "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
+> "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. In this repo we test all functionality of the app.
 
 ![screenshot](./screenshoot.PNG)
 
@@ -26,13 +26,13 @@ To get a local copy up and running follow these simple example steps.
 2. Then run the command npm install in your terminal to open the project in your browser
 3. [optional] You can even fork the project
 
-👤 **Authour:** **Roland Manful Mweze**
+👤 **Authour1:** **Roland Manful Mweze**
 
 - GitHub: [Rolandm99](https://github.com/RolandM99)
 - Twitter: [@Manfulmwez](https://twitter.com/ManfulMwez)
 - LinkedIn: [Roland N. MWEZE](https://www.linkedin.com/in/roland-n-mweze-8b1045189/)
 
-👤 **Authour:** **Roland Manful Mweze**
+👤 **Authour2:** **Mphatso Lichapa**
 
 - GitHub: [Lichapa](https://github.com/Lichapa)
 - Twitter: [@lichapa](https://twitter.com/)
